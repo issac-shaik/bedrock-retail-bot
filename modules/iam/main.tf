@@ -49,6 +49,25 @@ resource "aws_iam_role" "lambda_exec_role" {
   })
 }
 
+resource "aws_iam_role_policy" "lambda_dynamodb_policy" {
+  name = "LambdaDynamoDBPolicy"
+  role = aws_iam_role.lambda_exec_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect = "Allow",
+        Action = [
+          "dynamodb:GetItem"
+        ],
+        Resource = "arn:aws:dynamodb:ap-south-1:774305573467:table/Customers"
+      }
+    ]
+  })
+}
+
+
 resource "aws_iam_role_policy_attachment" "lambda_logs" {
   role       = aws_iam_role.lambda_exec_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
