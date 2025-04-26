@@ -1,39 +1,3 @@
-resource "aws_iam_role" "bedrock_agent_role" {
-  name = "BedrockAgentRole"
-
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17",
-    Statement = [{
-      Effect = "Allow",
-      Principal = {
-        Service = "bedrock.amazonaws.com"
-      },
-      Action = "sts:AssumeRole"
-    }]
-  })
-}
-
-resource "aws_iam_role_policy" "bedrock_agent_policy" {
-  name = "BedrockAgentPolicy"
-  role = aws_iam_role.bedrock_agent_role.id
-
-  policy = jsonencode({
-    Version = "2012-10-17",
-    Statement = [
-      {
-        Effect = "Allow",
-        Action = [
-          "lambda:InvokeFunction",
-          "dynamodb:GetItem",
-          "dynamodb:Query",
-          "dynamodb:Scan"
-        ],
-        Resource = "*"
-      }
-    ]
-  })
-}
-
 resource "aws_iam_role" "lambda_exec_role" {
   name = "LambdaExecutionRole"
 
@@ -108,6 +72,40 @@ resource "aws_iam_role_policy" "lambda_inventory_access" {
           "arn:aws:dynamodb:ap-south-1:774305573467:table/Customers",
           "arn:aws:dynamodb:ap-south-1:774305573467:table/Inventory"
         ]
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role" "bedrock_execution_role" {
+  name = "BedrockExecutionRole"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [{
+      Effect = "Allow",
+      Principal = {
+        Service = "bedrock.amazonaws.com"
+      },
+      Action = "sts:AssumeRole"
+    }]
+  })
+}
+
+resource "aws_iam_role_policy" "bedrock_execution_policy" {
+  name = "BedrockExecutionPolicy"
+  role = aws_iam_role.bedrock_execution_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect = "Allow",
+        Action = [
+          "bedrock:InvokeModel",
+          "lambda:InvokeFunction"
+        ],
+        Resource = "*"
       }
     ]
   })

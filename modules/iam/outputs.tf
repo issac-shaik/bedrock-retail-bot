@@ -1,5 +1,5 @@
-output "bedrock_agent_role_arn" {
-  value = aws_iam_role.bedrock_agent_role.arn
+output "bedrock_execution_role_arn" {
+  value = aws_iam_role.bedrock_execution_role.arn
 }
 
 output "lambda_exec_role_arn" {
