@@ -17,3 +17,6 @@ module "cognito" {
   source = "./modules/cognito"
 }
 
+module "s3" {
+  source = "./modules/s3"
+}

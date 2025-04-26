@@ -1,0 +1,252 @@
+{
+      "Inventory": [
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "1" },
+              "name": { "S": "Galaxy S25" },
+              "os": { "S": "Android" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Black" },
+              "budget": { "S": "500-650" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/galaxys25.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "2" },
+              "name": { "S": "Galaxy S25 Ultra" },
+              "os": { "S": "Android" },
+              "storage": { "S": "256GB" },
+              "color": { "S": "Blue" },
+              "budget": { "S": "650-800" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/galaxys25ultra.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "3" },
+              "name": { "S": "iPhone 11" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Red" },
+              "budget": { "S": "150-250" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone11.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "4" },
+              "name": { "S": "iPhone 11" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Blue" },
+              "budget": { "S": "150-250" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone11.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "5" },
+              "name": { "S": "iPhone 11" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Black" },
+              "budget": { "S": "150-250" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone11.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "6" },
+              "name": { "S": "iPhone 16" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "256GB" },
+              "color": { "S": "Black" },
+              "budget": { "S": "650-800" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone16.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "7" },
+              "name": { "S": "iPhone 16E" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Blue" },
+              "budget": { "S": "250-500" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone16e.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "8" },
+              "name": { "S": "iPhone 16E" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Red" },
+              "budget": { "S": "250-500" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone16e.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "9" },
+              "name": { "S": "iPhone 16E" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Black" },
+              "budget": { "S": "250-500" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone16e.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "10" },
+              "name": { "S": "iPhone 16 Pro" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "512GB" },
+              "color": { "S": "Black" },
+              "budget": { "S": "800-1000+" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone16pro.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "11" },
+              "name": { "S": "iPhone 16 Pro" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "256GB" },
+              "color": { "S": "Red" },
+              "budget": { "S": "650-800" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone16pro.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "12" },
+              "name": { "S": "iPhone 16 Pro Max" },
+              "os": { "S": "iOS" },
+              "storage": { "S": "512GB" },
+              "color": { "S": "Red" },
+              "budget": { "S": "800-1000+" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/iphone16promax.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "13" },
+              "name": { "S": "OnePlus 13" },
+              "os": { "S": "Android" },
+              "storage": { "S": "256GB" },
+              "color": { "S": "Blue" },
+              "budget": { "S": "500-650" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/oneplus13.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "14" },
+              "name": { "S": "OnePlus 13T" },
+              "os": { "S": "Android" },
+              "storage": { "S": "256GB" },
+              "color": { "S": "Black" },
+              "budget": { "S": "150-250" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/oneplus13t.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "15" },
+              "name": { "S": "OnePlus 13T" },
+              "os": { "S": "Android" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Red" },
+              "budget": { "S": "150-250" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/oneplus13t.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "16" },
+              "name": { "S": "OnePlus 13T" },
+              "os": { "S": "Android" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Pink" },
+              "budget": { "S": "150-250" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/oneplus13t.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "17" },
+              "name": { "S": "Pixel 9" },
+              "os": { "S": "Android" },
+              "storage": { "S": "128GB" },
+              "color": { "S": "Red" },
+              "budget": { "S": "250-500" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/pixel9.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "18" },
+              "name": { "S": "Pixel 9 Pro" },
+              "os": { "S": "Android" },
+              "storage": { "S": "256GB" },
+              "color": { "S": "Black" },
+              "budget": { "S": "500-650" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/pixel9pro.jpg" }
+            }
+          }
+        },
+        {
+          "PutRequest": {
+            "Item": {
+              "productId": { "S": "19" },
+              "name": { "S": "Pixel 9 Pro XL" },
+              "os": { "S": "Android" },
+              "storage": { "S": "512GB" },
+              "color": { "S": "Blue" },
+              "budget": { "S": "800-1000+" },
+              "imageUrl": { "S": "https://retail-phone-images-3fd5ed69.s3.ap-south-1.amazonaws.com/pixel9proxl.jpg" }
+            }
+          }
+        }
+      ]
+    
+}

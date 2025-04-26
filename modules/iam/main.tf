@@ -90,3 +90,25 @@ resource "aws_iam_role_policy" "lambda_update_policy" {
     ]
   })
 }
+
+resource "aws_iam_role_policy" "lambda_inventory_access" {
+  name = "LambdaInventoryAccessPolicy"
+  role = aws_iam_role.lambda_exec_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect = "Allow",
+        Action = [
+          "dynamodb:Scan",
+          "dynamodb:GetItem"
+        ],
+        Resource = [
+          "arn:aws:dynamodb:ap-south-1:774305573467:table/Customers",
+          "arn:aws:dynamodb:ap-south-1:774305573467:table/Inventory"
+        ]
+      }
+    ]
+  })
+}
