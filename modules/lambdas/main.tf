@@ -99,3 +99,43 @@ resource "aws_lambda_permission" "allow_api_gateway_update_traits" {
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_apigatewayv2_api.http_api.execution_arn}/*/*"
 }
+
+resource "aws_lambda_function" "get_inventory" {
+  function_name = "getInventoryFunction"
+  handler       = "index.handler"
+  runtime       = "nodejs18.x"
+  role          = var.lambda_role_arn
+  filename      = "${path.module}/../../get_inventory.zip"
+  
+  layers        = [aws_lambda_layer_version.aws_sdk_layer.arn] # ✅ Attach Layer Here
+  source_code_hash = filebase64sha256("${path.module}/../../get_inventory.zip")
+
+  environment {
+    variables = {
+      CUSTOMER_TABLE = var.customers_table
+      INVENTORY_TABLE = var.inventory_table
+    }
+  }
+}
+
+resource "aws_apigatewayv2_integration" "get_inventory_integration" {
+  api_id             = aws_apigatewayv2_api.http_api.id
+  integration_type   = "AWS_PROXY"
+  integration_uri    = aws_lambda_function.get_inventory.invoke_arn
+  integration_method = "POST"
+  payload_format_version = "2.0"
+}
+
+resource "aws_apigatewayv2_route" "get_inventory_route" {
+  api_id    = aws_apigatewayv2_api.http_api.id
+  route_key = "GET /get_inventory"
+  target    = "integrations/${aws_apigatewayv2_integration.get_inventory_integration.id}"
+}
+
+resource "aws_lambda_permission" "allow_api_gateway_get_inventory" {
+  statement_id  = "AllowExecutionFromAPIGatewayGetInventory"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.get_inventory.arn
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_apigatewayv2_api.http_api.execution_arn}/*/*"
+}

@@ -5,3 +5,8 @@ variable "lambda_role_arn" {
 variable "customers_table" {
   type = string
 }
+
+variable "inventory_table" {
+  description = "Inventory table"
+  type        = string
+}
